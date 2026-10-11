@@ -51,3 +51,11 @@ python -m unittest discover -s tests -v
 The tests cover structured-data extraction, deduplication, pricing and CSV formula protection. They do not verify current live Jiji page layouts.
 
 This repository was repurposed at the owner's request. Earlier voice-cloning files remain in Git history.
+
+## Deploy the web app on Netlify
+
+[Deploy to Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/jibrilmohamod/Real-Time-Voice-Cloning&branch=master)
+
+Choose the **gepdsomaliland** team. This imports the public repository and uses `netlify.toml` to run the Node tests and publish `public/` with the collection function. `.netlify/` is ignored to keep local linkage files out of Git.
+
+The web app supports category selection, supplier/search URLs, markup and extra costs, and CSV export. It uses a JavaScript collector because Netlify functions do not run the Python CLI. One page per request; no automatic reposting. Live Jiji collection has not yet been verified. An access block or unsupported layout is shown as an error, not fake results.
